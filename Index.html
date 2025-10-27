@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SILA MD MINI - WhatsApp Bot Deployment</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+        <div class="particles" id="particles-js"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-robot"></i>
+                <span>SILA MD MINI</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#deploy" class="nav-link">Deploy</a>
+                <a href="#docs" class="nav-link">Docs</a>
+                <a href="#support" class="nav-link">Support</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>🤖 AI-Powered WhatsApp Bot</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-main">SILA MD MINI</span>
+                    <span class="title-sub">Advanced WhatsApp Automation</span>
+                </h1>
+                <p class="hero-description">
+                    The most powerful and feature-rich WhatsApp bot with AI capabilities, 
+                    media downloading, group management, and much more. 
+                    Deploy your own instance in seconds!
+                </p>
+                <div class="hero-buttons">
+                    <a href="#deploy" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Deploy Now
+                    </a>
+                    <a href="#features" class="btn btn-secondary">
+                        <i class="fas fa-play-circle"></i>
+                        See Demo
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number" data-count="1000">0</div>
+                        <div class="stat-label">Active Bots</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-count="50">0</div>
+                        <div class="stat-label">Features</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" data-count="24">0</div>
+                        <div class="stat-label">/7 Support</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="terminal-btn close"></span>
+                            <span class="terminal-btn minimize"></span>
+                            <span class="terminal-btn maximize"></span>
+                        </div>
+                        <div class="terminal-title">bot@SILA-MD: ~</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span> npm install sila-md-mini
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">$</span> Initializing SILA MD MINI...
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">$</span> 🤖 Loading AI Modules...
+                        </div>
+                        <div class="terminal-line">
+                            <span class="prompt">$</span> 📱 Connecting WhatsApp...
+                        </div>
+                        <div class="terminal-line highlight">
+                            <span class="prompt">$</span> ✅ Bot Successfully Deployed!
+                        </div>
+                        <div class="terminal-line typing">
+                            <span class="prompt">$</span> <span class="cursor">|</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Powerful Features</h2>
+                <p class="section-subtitle">Everything you need in one WhatsApp bot</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI Assistant</h3>
+                    <p>Chat with Gemini AI, ChatGPT, and other AI models directly on WhatsApp</p>
+                    <div class="feature-tags">
+                        <span class="tag">Gemini</span>
+                        <span class="tag">ChatGPT</span>
+                        <span class="tag">Mistral</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3>Media Downloader</h3>
+                    <p>Download videos, music, and images from YouTube, TikTok, Facebook, and more</p>
+                    <div class="feature-tags">
+                        <span class="tag">YouTube</span>
+                        <span class="tag">TikTok</span>
+                        <span class="tag">Facebook</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Group Management</h3>
+                    <p>Advanced group tools with anti-link, auto-reply, and moderation features</p>
+                    <div class="feature-tags">
+                        <span class="tag">Anti-link</span>
+                        <span class="tag">Auto-reply</span>
+                        <span class="tag">Moderation</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>AI Image Generation</h3>
+                    <p>Create stunning images and videos with AI using simple text prompts</p>
+                    <div class="feature-tags">
+                        <span class="tag">DALL-E</span>
+                        <span class="tag">Stable Diffusion</span>
+                        <span class="tag">Sora</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Security & Privacy</h3>
+                    <p>End-to-end encryption with anti-delete and view-once message handling</p>
+                    <div class="feature-tags">
+                        <span class="tag">Encrypted</span>
+                        <span class="tag">Secure</span>
+                        <span class="tag">Private</span>
+                    </div>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>Easy Deployment</h3>
+                    <p>One-click deployment with automatic setup and configuration</p>
+                    <div class="feature-tags">
+                        <span class="tag">Auto-setup</span>
+                        <span class="tag">Easy</span>
+                        <span class="tag">Fast</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deployment Section -->
+    <section id="deploy" class="deploy">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Deploy Your Bot</h2>
+                <p class="section-subtitle">Get started in less than 5 minutes</p>
+            </div>
+            <div class="deploy-steps">
+                <div class="step" data-aos="fade-right">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Click Deploy</h3>
+                        <p>Press the deploy button below to launch your bot instance</p>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-right" data-aos-delay="100">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Enter Your Number</h3>
+                        <p>Provide your WhatsApp number with country code</p>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-right" data-aos-delay="200">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Get Pairing Code</h3>
+                        <p>Receive the pairing code from our system</p>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-right" data-aos-delay="300">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Connect WhatsApp</h3>
+                        <p>Enter the code in WhatsApp to connect your bot</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="deploy-actions" data-aos="zoom-in">
+                <div class="deploy-card">
+                    <div class="deploy-header">
+                        <h3>🚀 Free Deployment</h3>
+                        <div class="deploy-badge">Recommended</div>
+                    </div>
+                    <div class="deploy-features">
+                        <div class="deploy-feature">
+                            <i class="fas fa-check"></i>
+                            <span>All Basic Features</span>
+                        </div>
+                        <div class="deploy-feature">
+                            <i class="fas fa-check"></i>
+                            <span>24/7 Uptime</span>
+                        </div>
+                        <div class="deploy-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Auto Updates</span>
+                        </div>
+                        <div class="deploy-feature">
+                            <i class="fas fa-check"></i>
+                            <span>Community Support</span>
+                        </div>
+                    </div>
+                    <a href="https://sila-md-min-bot.onrender.com" class="btn btn-deploy" target="_blank">
+                        <i class="fab fa-github"></i>
+                        Deploy to Render
+                    </a>
+                    <p class="deploy-note">Free forever • No credit card required</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Section -->
+    <section id="docs" class="docs">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Documentation</h2>
+                <p class="section-subtitle">Learn how to use all features</p>
+            </div>
+            <div class="docs-grid">
+                <div class="doc-card" data-aos="flip-left">
+                    <div class="doc-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Getting Started</h3>
+                    <p>Complete guide to setup and configure your bot</p>
+                    <a href="#" class="doc-link">Read Guide →</a>
+                </div>
+                <div class="doc-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="doc-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>API Reference</h3>
+                    <p>Detailed API documentation and examples</p>
+                    <a href="#" class="doc-link">View API →</a>
+                </div>
+                <div class="doc-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="doc-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Video Tutorials</h3>
+                    <p>Step-by-step video guides and demos</p>
+                    <a href="#" class="doc-link">Watch Videos →</a>
+                </div>
+                <div class="doc-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="doc-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <h3>FAQ</h3>
+                    <p>Frequently asked questions and solutions</p>
+                    <a href="#" class="doc-link">View FAQ →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section id="support" class="support">
+        <div class="container">
+            <div class="support-content">
+                <div class="support-text" data-aos="fade-right">
+                    <h2>Need Help?</h2>
+                    <p>Our support team is here to help you with any issues or questions</p>
+                    <div class="support-channels">
+                        <div class="channel">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>+255 612 491 554</span>
+                        </div>
+                        <div class="channel">
+                            <i class="fab fa-telegram"></i>
+                            <span>@sila_md_support</span>
+                        </div>
+                        <div class="channel">
+                            <i class="fas fa-envelope"></i>
+                            <span>support@sila.md</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="support-form" data-aos="fade-left">
+                    <form id="supportForm">
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="How can we help you?" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-robot"></i>
+                        SILA MD MINI
+                    </div>
+                    <p>Advanced WhatsApp automation with AI capabilities and powerful features.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#home">Home</a>
+                    <a href="#features">Features</a>
+                    <a href="#deploy">Deploy</a>
+                    <a href="#docs">Documentation</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <a href="#">GitHub Repository</a>
+                    <a href="#">API Documentation</a>
+                    <a href="#">Video Tutorials</a>
+                    <a href="#">Community</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SILA MD MINI. All rights reserved. | Powered by Advanced AI Technology</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
