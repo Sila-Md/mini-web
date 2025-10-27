@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SILA MD MINI</title>
+    <title>SILA MD MINI - WhatsApp Bot Deployment</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Background Music -->
+    <audio id="bgMusic" loop>
+        <source src="https://files.catbox.moe/m3i466.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Control -->
+    <div class="music-control" id="musicControl">
+        <i class="fas fa-play" id="musicIcon"></i>
+    </div>
+
     <!-- Animated Background -->
     <div class="animated-bg">
         <div class="floating-shapes">
@@ -24,15 +35,15 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <i class="fas fa-robot"></i>
+                <img src="https://files.catbox.moe/ebj284.jpg" alt="SILA MD MINI Logo" class="logo-img">
                 <span>SILA MD MINI</span>
             </div>
             <div class="nav-menu" id="navMenu">
                 <a href="#home" class="nav-link active">Home</a>
                 <a href="#features" class="nav-link">Features</a>
-                <a href="#deploy" class="https://sila-md-min-bot.onrender.com">Deploy</a>
-                <a href="#docs" class="nav-link">Docs</a>
-                <a href="#support" class="silatrix22@gmail.com">Support</a>
+                <a href="#servers" class="nav-link">Servers</a>
+                <a href="#deploy" class="nav-link">Deploy</a>
+                <a href="#support" class="nav-link">Support</a>
             </div>
             <div class="nav-toggle" id="navToggle">
                 <span class="bar"></span>
@@ -56,16 +67,16 @@
                 <p class="hero-description">
                     The most powerful and feature-rich WhatsApp bot with AI capabilities, 
                     media downloading, group management, and much more. 
-                    Deploy your own instance in seconds!
+                    Choose from multiple servers for optimal performance!
                 </p>
                 <div class="hero-buttons">
-                    <a href="#deploy" class="btn btn-primary">
-                        <i class="fas fa-rocket"></i>
-                        Deploy Now
+                    <a href="#servers" class="btn btn-primary">
+                        <i class="fas fa-server"></i>
+                        Choose Server
                     </a>
                     <a href="#features" class="btn btn-secondary">
                         <i class="fas fa-play-circle"></i>
-                        See Demo
+                        See Features
                     </a>
                 </div>
                 <div class="hero-stats">
@@ -74,8 +85,8 @@
                         <div class="stat-label">Active Bots</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number" data-count="50">0</div>
-                        <div class="stat-label">Features</div>
+                        <div class="stat-number" data-count="6">0</div>
+                        <div class="stat-label">Servers</div>
                     </div>
                     <div class="stat">
                         <div class="stat-number" data-count="24">0</div>
@@ -195,11 +206,11 @@
                     <div class="feature-icon">
                         <i class="fas fa-plug"></i>
                     </div>
-                    <h3>Easy Deployment</h3>
-                    <p>One-click deployment with automatic setup and configuration</p>
+                    <h3>Multiple Servers</h3>
+                    <p>Choose from 6 different servers for optimal performance and reliability</p>
                     <div class="feature-tags">
-                        <span class="tag">Auto-setup</span>
-                        <span class="tag">Easy</span>
+                        <span class="tag">6 Servers</span>
+                        <span class="tag">Reliable</span>
                         <span class="tag">Fast</span>
                     </div>
                 </div>
@@ -207,117 +218,174 @@
         </div>
     </section>
 
-    <!-- Deployment Section -->
+    <!-- Servers Section -->
+    <section id="servers" class="servers">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Available Servers</h2>
+                <p class="section-subtitle">Choose the best server for your needs</p>
+            </div>
+            <div class="servers-grid">
+                <div class="server-card" data-aos="zoom-in">
+                    <div class="server-header">
+                        <div class="server-badge primary">Primary</div>
+                        <h3>Server 1</h3>
+                    </div>
+                    <div class="server-info">
+                        <div class="server-status online">
+                            <i class="fas fa-circle"></i>
+                            Online
+                        </div>
+                        <p>Main deployment server with all features enabled</p>
+                    </div>
+                    <a href="https://sila-md-min-bot.onrender.com" class="btn btn-server" target="_blank">
+                        <i class="fas fa-rocket"></i>
+                        Deploy Now
+                    </a>
+                </div>
+
+                <div class="server-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="server-header">
+                        <div class="server-badge secondary">Backup</div>
+                        <h3>Server 2</h3>
+                    </div>
+                    <div class="server-info">
+                        <div class="server-status online">
+                            <i class="fas fa-circle"></i>
+                            Online
+                        </div>
+                        <p>Alternative server with high availability</p>
+                    </div>
+                    <a href="https://sudo-delete-web-service-sila-md-mini-bot.onrender.com" class="btn btn-server" target="_blank">
+                        <i class="fas fa-rocket"></i>
+                        Deploy Now
+                    </a>
+                </div>
+
+                <div class="server-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="server-header">
+                        <div class="server-badge premium">Premium</div>
+                        <h3>Server 3</h3>
+                    </div>
+                    <div class="server-info">
+                        <div class="server-status online">
+                            <i class="fas fa-circle"></i>
+                            Online
+                        </div>
+                        <p>Enhanced performance with premium features</p>
+                    </div>
+                    <a href="https://rich-md.onrender.com" class="btn btn-server" target="_blank">
+                        <i class="fas fa-rocket"></i>
+                        Deploy Now
+                    </a>
+                </div>
+
+                <div class="server-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="server-header">
+                        <div class="server-badge standard">Standard</div>
+                        <h3>Server 4</h3>
+                    </div>
+                    <div class="server-info">
+                        <div class="server-status online">
+                            <i class="fas fa-circle"></i>
+                            Online
+                        </div>
+                        <p>Reliable server for everyday use</p>
+                    </div>
+                    <a href="https://min-bot-ewan.onrender.com" class="btn btn-server" target="_blank">
+                        <i class="fas fa-rocket"></i>
+                        Deploy Now
+                    </a>
+                </div>
+
+                <div class="server-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="server-header">
+                        <div class="server-badge freedom">Freedom</div>
+                        <h3>Server 5</h3>
+                    </div>
+                    <div class="server-info">
+                        <div class="server-status online">
+                            <i class="fas fa-circle"></i>
+                            Online
+                        </div>
+                        <p>Unlimited features and freedom edition</p>
+                    </div>
+                    <a href="https://freedom-mini-1.onrender.com" class="btn btn-server" target="_blank">
+                        <i class="fas fa-rocket"></i>
+                        Deploy Now
+                    </a>
+                </div>
+
+                <div class="server-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="server-header">
+                        <div class="server-badge youtube">YouTube</div>
+                        <h3>Silatrix22</h3>
+                    </div>
+                    <div class="server-info">
+                        <div class="server-status online">
+                            <i class="fas fa-circle"></i>
+                            Online
+                        </div>
+                        <p>Visit our YouTube channel for tutorials and updates</p>
+                    </div>
+                    <a href="https://www.youtube.com/@Silatrix22" class="btn btn-server youtube-btn" target="_blank">
+                        <i class="fab fa-youtube"></i>
+                        Visit Channel
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deployment Guide -->
     <section id="deploy" class="deploy">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Deploy Your Bot</h2>
+                <h2 class="section-title">Deployment Guide</h2>
                 <p class="section-subtitle">Get started in less than 5 minutes</p>
             </div>
             <div class="deploy-steps">
                 <div class="step" data-aos="fade-right">
                     <div class="step-number">01</div>
                     <div class="step-content">
-                        <h3>Click Deploy</h3>
-                        <p>Press the deploy button below to launch your bot instance</p>
+                        <h3>Choose Server</h3>
+                        <p>Select any server from the available options above</p>
                     </div>
                 </div>
                 <div class="step" data-aos="fade-right" data-aos-delay="100">
                     <div class="step-number">02</div>
                     <div class="step-content">
                         <h3>Enter Your Number</h3>
-                        <p>Provide your WhatsApp number with country code</p>
+                        <p>Provide your WhatsApp number with country code (e.g., 255612491554)</p>
                     </div>
                 </div>
                 <div class="step" data-aos="fade-right" data-aos-delay="200">
                     <div class="step-number">03</div>
                     <div class="step-content">
                         <h3>Get Pairing Code</h3>
-                        <p>Receive the pairing code from our system</p>
+                        <p>Receive the 6-digit pairing code from the server</p>
                     </div>
                 </div>
                 <div class="step" data-aos="fade-right" data-aos-delay="300">
                     <div class="step-number">04</div>
                     <div class="step-content">
                         <h3>Connect WhatsApp</h3>
-                        <p>Enter the code in WhatsApp to connect your bot</p>
+                        <p>Go to WhatsApp → Linked Devices → Link a Device → Enter the code</p>
                     </div>
                 </div>
             </div>
             
-            <div class="deploy-actions" data-aos="zoom-in">
-                <div class="deploy-card">
-                    <div class="deploy-header">
-                        <h3>🚀 Free Deployment</h3>
-                        <div class="deploy-badge">Recommended</div>
-                    </div>
-                    <div class="deploy-features">
-                        <div class="deploy-feature">
-                            <i class="fas fa-check"></i>
-                            <span>All Basic Features</span>
-                        </div>
-                        <div class="deploy-feature">
-                            <i class="fas fa-check"></i>
-                            <span>24/7 Uptime</span>
-                        </div>
-                        <div class="deploy-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Auto Updates</span>
-                        </div>
-                        <div class="deploy-feature">
-                            <i class="fas fa-check"></i>
-                            <span>Community Support</span>
-                        </div>
-                    </div>
-                    <a href="https://sila-md-min-bot.onrender.com" class="btn btn-deploy" target="_blank">
-                        <i class="fab fa-github"></i>
-                        Deploy to Render
+            <div class="community-links">
+                <h3>Join Our Community</h3>
+                <div class="community-buttons">
+                    <a href="https://whatsapp.com/channel/0029VbBPxQTJUM2WCZLB6j28" class="btn btn-channel" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                        Official Channel
                     </a>
-                    <p class="deploy-note">Free forever • No credit card required</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Documentation Section -->
-    <section id="docs" class="docs">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Documentation</h2>
-                <p class="section-subtitle">Learn how to use all features</p>
-            </div>
-            <div class="docs-grid">
-                <div class="doc-card" data-aos="flip-left">
-                    <div class="doc-icon">
-                        <i class="fas fa-book"></i>
-                    </div>
-                    <h3>Getting Started</h3>
-                    <p>Complete guide to setup and configure your bot</p>
-                    <a href="#" class="doc-link">Read Guide →</a>
-                </div>
-                <div class="doc-card" data-aos="flip-left" data-aos-delay="100">
-                    <div class="doc-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>API Reference</h3>
-                    <p>Detailed API documentation and examples</p>
-                    <a href="#" class="255612491554">View API →</a>
-                </div>
-                <div class="255612491554" data-aos="flip-left" data-aos-delay="200">
-                    <div class="https://files.catbox.moe/gnjb7s.jpg">
-                        <i class="fas fa-video"></i>
-                    </div>
-                    <h3>Video Tutorials</h3>
-                    <p>Step-by-step video guides and demos</p>
-                    <a href="#" class="https://youtube.com/shorts/71sW0XrnYjs?feature=share">Watch Videos →</a>
-                </div>
-                <div class="doc-card" data-aos="flip-left" data-aos-delay="300">
-                    <div class="doc-icon">
-                        <i class="fas fa-question-circle"></i>
-                    </div>
-                    <h3>FAQ</h3>
-                    <p>Frequently asked questions and solutions</p>
-                    <a href="#" class="255612491554">View FAQ →</a>
+                    <a href="https://chat.whatsapp.com/C03aOCLQeRUH821jWqRPC6" class="btn btn-group" target="_blank">
+                        <i class="fas fa-users"></i>
+                        Support Group
+                    </a>
                 </div>
             </div>
         </div>
@@ -336,12 +404,12 @@
                             <span>+255 612 491 554</span>
                         </div>
                         <div class="channel">
-                            <i class="fab fa-telegram"></i>
-                            <span>@sila_tech2</span>
+                            <i class="fab fa-youtube"></i>
+                            <span>@Silatrix22</span>
                         </div>
                         <div class="channel">
                             <i class="fas fa-envelope"></i>
-                            <span>support@silatrix22</span>
+                            <span>support@sila.md</span>
                         </div>
                     </div>
                 </div>
@@ -372,47 +440,47 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="footer-logo">
-                        <i class="fas fa-robot"></i>
+                        <img src="https://files.catbox.moe/ebj284.jpg" alt="SILA MD MINI Logo" class="logo-img">
                         SILA MD MINI
                     </div>
                     <p>Advanced WhatsApp automation with AI capabilities and powerful features.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-telegram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.youtube.com/@Silatrix22" target="_blank"><i class="fab fa-youtube"></i></a>
+                        <a href="https://whatsapp.com/channel/0029VbBPxQTJUM2WCZLB6j28" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://chat.whatsapp.com/C03aOCLQeRUH821jWqRPC6" target="_blank"><i class="fas fa-users"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <a href="#home">Home</a>
                     <a href="#features">Features</a>
+                    <a href="#servers">Servers</a>
                     <a href="#deploy">Deploy</a>
-                    <a href="#docs">Documentation</a>
                 </div>
                 <div class="footer-section">
-                    <h4>Resources</h4>
-                    <a href="#">GitHub Repository</a>
-                    <a href="#">API Documentation</a>
-                    <a href="#">Video Tutorials</a>
-                    <a href="#">Community</a>
+                    <h4>Servers</h4>
+                    <a href="https://sila-md-min-bot.onrender.com" target="_blank">Server 1</a>
+                    <a href="https://sudo-delete-web-service-sila-md-mini-bot.onrender.com" target="_blank">Server 2</a>
+                    <a href="https://rich-md.onrender.com" target="_blank">Server 3</a>
+                    <a href="https://min-bot-ewan.onrender.com" target="_blank">Server 4</a>
                 </div>
                 <div class="footer-section">
-                    <h4>Legal</h4>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Cookie Policy</a>
+                    <h4>Support</h4>
+                    <a href="#support">Contact Us</a>
+                    <a href="https://whatsapp.com/channel/0029VbBPxQTJUM2WCZLB6j28" target="_blank">Channel</a>
+                    <a href="https://chat.whatsapp.com/C03aOCLQeRUH821jWqRPC6" target="_blank">Group</a>
+                    <a href="https://www.youtube.com/@Silatrix22" target="_blank">YouTube</a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 SILA MD MINI. All rights reserved. | Powered by Advanced AI Technology</p>
+                <p>&copy; 2024 SILA MD MINI. All rights reserved. | Powered by Advanced AI Technology</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
