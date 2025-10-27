@@ -1,4 +1,4 @@
-# SILA MD MINI - Deployment Website
+# SILA MD MINI 
 
 A modern, animated tech-style website for deploying the SILA MD MINI WhatsApp bot.
 
