@@ -2,9 +2,9 @@
   "name": "sila-md-mini-website",
   "version": "1.0.0",
   "description": "SILA MD MINI Deployment Website",
-  "main": "public/index.html",
+  "main": "index.html",
   "scripts": {
-    "start": "npx serve -s public -p $PORT",
+    "start": "index.html",
     "build": "echo 'No build needed for static site'",
     "dev": "npx serve -s public -p 3000"
   },
