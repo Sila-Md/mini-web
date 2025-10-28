@@ -1,23 +1,20 @@
 {
-  "name": "sila-md-mini-deployment",
+  "name": "sila-md-mini-website",
   "version": "1.0.0",
-  "description": "Deployment website for SILA MD MINI WhatsApp Bot with multiple servers",
-  "main": "index.html",
+  "description": "SILA MD MINI Deployment Website",
+  "main": "public/index.html",
   "scripts": {
-    "dev": "python3 -m http.server 3000",
-    "start": "python3 -m http.server 3000"
+    "start": "npx serve -s public -p $PORT",
+    "build": "echo 'No build needed for static site'",
+    "dev": "npx serve -s public -p 3000"
   },
-  "keywords": [
-    "whatsapp",
-    "bot",
-    "deployment",
-    "automation",
-    "ai",
-    "multiple-servers"
-  ],
+  "keywords": ["whatsapp", "bot", "deployment"],
   "author": "SILA MD",
   "license": "MIT",
+  "dependencies": {
+    "serve": "^14.2.1"
+  },
   "engines": {
-    "node": ">=14"
+    "node": ">=18"
   }
 }
